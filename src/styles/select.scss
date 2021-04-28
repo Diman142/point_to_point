@@ -1,0 +1,152 @@
+.select {
+  box-sizing: border-box;
+  width: 172px;
+  height: 44px;
+  position: relative;
+
+  &-header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+    background-color: #fff;
+    align-items: center;
+
+    &::after{
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(255,255,255,0),  rgba(255,255,255,1) 30%);
+      z-index: 3;
+    }
+
+    &__icon {
+      display: flex;
+      justify-content: center;
+      flex-shrink: 0;
+      align-items: center;
+      width: 8px;
+      height: 5px;
+      text-align: center;
+      margin-left: auto;
+      background-image: url('../assets/icons/downArrow.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-right: 9.5%;
+      z-index: 5;
+
+      &_long{
+        margin-right: 4.5%;
+      }
+
+      &_active{
+        transform: rotate(180deg);
+      }
+    }
+
+    &__current{
+      font-size: 15px;
+      line-height: 1.5;
+      padding: 5px;
+      padding-left: 0;
+      text-indent: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+
+      color: #0B2349;
+
+    }
+
+  }
+
+  &-body {
+    width: 100%;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    border-top: 0;
+    background-color: #fff;
+    z-index: 10;
+
+    &__item{
+      padding: 5px;
+      font-size: 15px;
+      line-height: 1.5;
+      cursor: pointer;
+      padding-left: 0;
+      text-indent: 10px;
+
+      &:hover {
+        background-color: #EF483E;
+      }
+    }
+
+    &_active{
+      display: block;
+    }
+  }
+
+
+  &-container {
+    &:not(:last-child){
+      margin-right: 12px;
+    }
+
+    &_cargo{
+      display: none;
+      margin-bottom: 16px;
+    }
+  }
+
+  &_long{
+    width: 356px;
+  }
+}
+
+
+
+@media all and (max-width: 540px){
+
+  .select {
+    width: 93%;
+
+    &-header{
+      &__icon{
+        &_long{
+          margin-right: 9.5%;
+        }
+      }
+    }
+
+    &-container{
+      margin-right: 0;
+      width: 48%;
+
+
+      &:not(:last-child) {
+        margin-right: 0px;
+      }
+
+      &_cargo{
+        display: none;
+        margin-bottom: 16px;
+      }
+
+      &_smallcargo{
+        display: block;
+      }
+    }
+
+    &_long{
+      width: 93%;
+    }
+  }
+
+}
