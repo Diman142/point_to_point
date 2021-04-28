@@ -1,8 +1,6 @@
 import '../styles/select.scss'
 import '../styles/styles.scss'
 
-// "browserslist": "last 2 versions",
-
 function select() {
   let selectHeader = document.querySelectorAll('.select-header')
   let selectItem = document.querySelectorAll('.select-body__item')

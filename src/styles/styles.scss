@@ -493,6 +493,10 @@ input::-webkit-inner-spin-button {
         &::after{
           right: 40%;
         }
+
+        &__text{
+          font-size: 11px;
+        }
       }
     }
   }
