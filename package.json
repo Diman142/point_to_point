@@ -26,8 +26,6 @@
     "copy-webpack-plugin": "^8.1.1",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.4",
-    "eslint-loader": "^4.0.2",
-    "eslint-webpack-plugin": "^2.5.4",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "mini-css-extract-plugin": "^1.5.0",
@@ -44,7 +42,6 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "autoprefixer": "^10.2.5",
-    "choices.js": "^9.0.1",
     "normalize.css": "^8.0.1",
     "postcss-loader": "^5.2.0"
   }
